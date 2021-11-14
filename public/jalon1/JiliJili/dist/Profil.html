@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>JiliJili</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>UserInfo</title>
+    <style type="text/css">
+        .Content-Main{
+            max-width: 500px;
+            margin: auto;
+            border: none;
+            border-radius: 5px; 
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-shadow: 1px 1px 1px #444;
+            color: #D3D3D3;
+            background: #555;
+        }
+        .Content-Main h1{
+            padding: 8px 0px 40px 10px;
+            display: block;
+            border-bottom: 1px solid #444;
+        }
+        .text1{
+            margin-left: 3px;
+        }
+        .Content-Main label{
+            margin: 0px 0px 5px;
+            display: block;
+        }
+        .fileInputContainer{
+            height: 99px;
+            width: 99px;
+            margin: 20px 20px 20px 20px ;
+            border: none;
+            background: url("assets/dog.jpeg");
+            overflow: hidden; 
+            position: relative; 
+        }
+        .fileInput{
+            height: 106px;
+            border: none;
+            font-size: 300px;
+            opacity: 0;  
+            filter:alpha(opacity=0);
+            cursor: pointer;
+            position: absolute;
+        }
+        .Content-Main label>span{
+            width: 20%;
+            float: left;
+            text-align: right;
+            padding-right: 10px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .Main-sex{
+            padding-right: 13px;
+            padding-bottom: 13px;
+            font-weight: bold;
+            line-height: 4px; 
+        }
+        .Main-sex input[type=checkbox]{
+            margin-top:6px;
+            vertical-align:middle; 
+        }
+        .Content-Main input[type="text"],.Content-Main input[type="email"],.Content-Main textarea{
+            height: 25px;
+            width: 70%;
+            line-height: 15px;
+            padding: 5px 0px 5px 5px; 
+            margin-bottom: 16px;
+            margin-right: 6px;
+            margin-top: 2px;
+            border: none;
+            border-radius:2px;
+            -webkit-border-radius:2px;
+            -moz-border-radius:2px;
+            outline: 0 none; 
+            background:  #DFDFDF;
+            color: #525252;
+        }
+        .Content-Main textarea{
+            height: 100px;
+            width: 70%;
+            padding: 5px 0px 0px 5px;
+        }
+        .Content-Main .button{
+            padding: 8px 24px 8px 24px;
+            margin-bottom: 8px;
+            border: none;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #FFE477;
+            box-shadow: 1px 1px 1px  #3D3D3D;
+            -moz-box-shadow: 1px 1px 1px  #3D3D3D;
+            -webkit-box-shadow: 1px 1px 1px  #3D3D3D;
+            color: #585858;
+            background: #f6ff0a;
+        }
+        .Content-Main .button:hover{
+            color:  #333;
+            background-color:  #EBEBEB ;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="./index.html">Acceuil</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="./login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./register.html">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Profil.html">Profil</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">List</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./playlist.html">PlayList</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="./watchlist.html">WatchList</a></li>
+                            <li><a class="dropdown-item" href="./favoritelist.html">FavoriteList</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+
+                    <button class="btn btn-outline-dark"  type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        <a href="./playlist.html">PlayList</a>
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </nav>
+        <div class="Content-Main">
+            <form  action="" method="post" class="form-userInfo">
+                <h1>Profil</h1>
+                <span class="text1">Complete your personal information in the text box:</span>
+                <p>
+                <div class="fileInputContainer">
+                    <input class="fileInput" id="" type="file" name="">
+                </div>
+                <label>
+                    <span>Your name:</span>
+                    <input type="text"  name="name" placeholder="Your Full Name">
+                </label>
+                <label class="Main-sex">
+                    <span>Your sex:</span>
+                    <input type="checkbox" class="man">男
+                    <input type="checkbox" class="women">女
+                </label>
+                <label>
+                    <span>Your email :</span>
+                    <input type="email" name="email" placeholder="@.com">
+                </label>
+                <label>
+                    <span>Your phone:</span>
+                    <input type="text" name="phone" placeholder="Please input 11 number">
+                </label>
+                <label>
+                    <span>Message:</span>
+                    <textarea id="message" name="message" placeholder="Your message to us"></textarea>
+                </label>
+                <label>
+                    <input type="button" class="button" value="Submit">
+                </label>
+            </form>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+</body>
+</html>
