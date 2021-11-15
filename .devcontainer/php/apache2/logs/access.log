@@ -53,3 +53,4 @@
 172.18.0.1 - - [15/Nov/2021:14:40:34 +0000] "GET /catalogue/public/index.php HTTP/1.1" 200 1180 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
 172.18.0.1 - - [15/Nov/2021:14:40:57 +0000] "GET /catalogue/public/index.php HTTP/1.1" 200 261 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
 172.18.0.1 - - [15/Nov/2021:14:41:49 +0000] "-" 408 0 "-" "-"
+172.18.0.1 - - [15/Nov/2021:15:41:28 +0000] "GET /catalogue/public/index.php HTTP/1.1" 200 6372 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
