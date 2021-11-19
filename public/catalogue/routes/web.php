@@ -27,3 +27,4 @@ Route::get('appelDeMaVue/{prenom}', function ($prenom) {
 
 Route::get('listeMedias', 'App\Http\controllers\listeMediasController@getListeMedias');
 Route::get('listeMedias/{type}/{annee}', 'App\Http\controllers\listeMediasController@getListeMediasTypeAnnee');
+Route::get('users/add', 'App\Http\controllers\UserController@add');
