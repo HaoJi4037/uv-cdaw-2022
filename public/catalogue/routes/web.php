@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ShowFilmsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +13,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('test/{type}/{annee}', function () {
+    echo 'toto';
 
-Route::get('/', function () {
-    return view('welcome');
 });
+
+Route::get('appelDeMaVue/{prenom}', function ($prenom) {
+    //return view('welcome');
+    return view('leNomDeLaVue', ['prenom' => $prenom]);
+
+})->where('prenom', '[A-Za-z]+') ->name('maroute');
+
+
+Route::get('listeMedias', 'App\Http\controllers\listeMediasController@getListeMedias');
+Route::get('listeMedias/{type}/{annee}', 'App\Http\controllers\listeMediasController@getListeMediasTypeAnnee');
