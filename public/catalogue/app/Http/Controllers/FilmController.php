@@ -9,7 +9,7 @@ use App\Models\Film;
 class FilmController extends Controller
 {
     public function showAllFilms(){
-        $films = Film::with('category')->get();
+        $films = Film::where('id',1)->with('category')->get()[0];//get->first,prend premier
         //$authUser = Auth::user();
         //$favs = $authUser->load('favs')['favs'];
         //$favIds = array();
