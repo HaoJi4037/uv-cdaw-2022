@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ShowFilmsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,18 +12,20 @@ use App\Http\Controllers\ShowFilmsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('test/{type}/{annee}', function () {
-    echo 'toto';
 
-});
-
-Route::get('appelDeMaVue/{prenom}', function ($prenom) {
-    //return view('welcome');
+Route::get('test/{prenom}', function ($prenom) {
     return view('leNomDeLaVue', ['prenom' => $prenom]);
-
-})->where('prenom', '[A-Za-z]+') ->name('maroute');
+})->where('prenom', '[A-Za-z]+') ->name('route');
 
 
 Route::get('listeMedias', 'App\Http\controllers\listeMediasController@getListeMedias');
-Route::get('listeMedias/{type}/{annee}', 'App\Http\controllers\listeMediasController@getListeMediasTypeAnnee');
+Route::get('listeMedias2/{type}/{annee}', 'App\Http\controllers\listeMediasController@getListeMedias2');
 Route::get('users/add', 'App\Http\controllers\UserController@add');
+Route::get('users/select', 'App\Http\controllers\UserController@select');
+
+
+Route::get('show/all', 'App\Http\controllers\ShowFilmsController@showAllFilms');
+Route::post('/addFilm', 'App\Http\controllers\ShowFilmsController@addFilm');
+Route::post('/updateFilm', 'App\Http\controllers\ShowFilmsController@updateFilm');
+Route::post('/deleteFilm', 'App\Http\controllers\ShowFilmsController@deleteFilm');
+
