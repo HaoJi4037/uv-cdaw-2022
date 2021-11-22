@@ -19,7 +19,7 @@ Route::get('test/{prenom}', function ($prenom) {
 
 
 Route::get('listeMedias', 'App\Http\controllers\listeMediasController@getListeMedias');
-Route::get('listeMedias2/{type}/{annee}', 'App\Http\controllers\listeMediasController@getListeMedias2');
+Route::get('listeMedias/{type}/{annee}', 'App\Http\controllers\listeMediasController@getListeMediasTypeAnnee');
 Route::get('users/add', 'App\Http\controllers\UserController@add');
 Route::get('users/select', 'App\Http\controllers\UserController@select');
 
@@ -29,3 +29,7 @@ Route::post('/addFilm', 'App\Http\controllers\ShowFilmsController@addFilm');
 Route::post('/updateFilm', 'App\Http\controllers\ShowFilmsController@updateFilm');
 Route::post('/deleteFilm', 'App\Http\controllers\ShowFilmsController@deleteFilm');
 
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
