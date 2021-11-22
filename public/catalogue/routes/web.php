@@ -18,6 +18,9 @@ Route::get('test/{prenom}', function ($prenom) {
 })->where('prenom', '[A-Za-z]+') ->name('route');
 
 
+Route::get('/', function(){
+    return view('welcome');
+});
 Route::get('listeMedias', 'App\Http\controllers\listeMediasController@getListeMedias');
 Route::get('listeMedias/{type}/{annee}', 'App\Http\controllers\listeMediasController@getListeMediasTypeAnnee');
 Route::get('users/add', 'App\Http\controllers\UserController@add');
