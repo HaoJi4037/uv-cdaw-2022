@@ -19,10 +19,10 @@ class User extends Authenticatable
     use TwoFactorAuthenticatable;
 
     //    1. 关联的数据表
-    public $table = 'user';
+    public $table = 'users';
 
 //    2. 主键
-    public $primaryKey = 'user_id';
+    public $primaryKey = 'id';
 
 //    3. 允许批量操作的字段
 
@@ -35,7 +35,7 @@ class User extends Authenticatable
     //跟Role的关联模型
     public function role()
     {
-        return $this->belongsToMany('App\Model\Role','user_role','user_id','role_id');
+        return $this->belongsToMany('App\Model\Role','user_role','id','role_id');
     }
 
     /**
@@ -43,11 +43,11 @@ class User extends Authenticatable
      *
      * @var string[]
      */
-    protected $fillable = [
+    /*protected $fillable = [
         'name',
         'email',
         'password',
-    ];
+    ];*/
 
     /**
      * The attributes that should be hidden for serialization.

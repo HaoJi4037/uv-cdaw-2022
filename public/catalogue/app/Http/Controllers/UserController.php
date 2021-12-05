@@ -22,14 +22,7 @@ class UserController extends Controller
         ]);
         dd($rst);
     }*/
-    /**
-     *获取一个添加页面 
-     * @param null
-     * @return 返回添加页面
-     */
-    public function add(){
-        return view(view:'admin.user.add');
-    }
+
     //返回角色授权页面
     public function auth($id)
     {

@@ -3,13 +3,16 @@
   
   <head>
     <meta charset="UTF-8">
-    <title>用户列表页</title>
+    <title>User List Page</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    @include('admin.public.styles')
-    @include('admin.public.script')
+    <link rel="stylesheet" href="{{ asset('admin/css/font.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/xadmin.css') }}">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ asset('admin/lib/layui/layui.js') }}" charset="utf-8"></script>
+    <script type="text/javascript" src="{{ asset('admin/js/xadmin.js') }}"></script>
     <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
     <!--[if lt IE 9]>
       <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -46,9 +49,9 @@
         </form>
       </div>
       <xblock>
-        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
+        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>delete many</button>
         <button class="layui-btn" onclick="x_admin_show('添加用户','{{ url('admin/user/create') }}',600,400)"><i class="layui-icon"></i>添加</button>
-        <span class="x-right" style="line-height:40px">共有数据：88 条</span>
+        <span class="x-right" style="line-height:40px">data：88 </span>
       </xblock>
       <table class="layui-table">
         <thead>
@@ -57,12 +60,32 @@
               <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
             </th>
             <th>ID</th>
-            <th>用户名</th>
-            <th>邮箱</th>
-            <th>状态</th>
-            <th>操作</th></tr>
+            <th>UserName</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Etat</th></tr>
         </thead>
         <tbody>
+        <tr>
+            <td>
+              <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+            </td>
+            <td>1</td>
+            <td>Hao Ji</td>
+            <td>hao.ji@etu.imt-nord-europe.fr</td>
+            <td>04</td>
+            <td>01</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+            </td>
+            <td>2</td>
+            <td>JiaQi Gao</td>
+            <td>jiaqi.gao@etu.imt-nord-europe.fr</td>
+            <td>04</td>
+            <td>00</td>
+          </tr>
         @foreach($user as $v)
           <tr>
             <td>
