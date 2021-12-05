@@ -6,8 +6,30 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+
 class UserController extends Controller
 {
+    /*public function add(){
+        $db = DB::table('users');
+        $rst= $db -> insert([
+            [
+                'id'=>'01',
+                'name'=>'feifan',
+                'email'=>'feifan@gmail.com',
+                'password'=>'123456',
+                'remember_token'=>'123'
+            ]
+        ]);
+        dd($rst);
+    }*/
+    /**
+     *获取一个添加页面 
+     * @param null
+     * @return 返回添加页面
+     */
+    public function add(){
+        return view(view:'admin.user.add');
+    }
     //返回角色授权页面
     public function auth($id)
     {
