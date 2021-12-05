@@ -22,7 +22,7 @@
 <body class="login-bg">
     
     <div class="login">
-        <div class="message">administer login (后台管理登录)</div>
+        <div class="message">administer login </div>
 
         @if (!empty($errors))
             <div class="alert alert-danger">
@@ -41,9 +41,9 @@
         
         <form method="post" class="layui-form" action="{{ url('admin/dologin') }}">
             {{ csrf_field() }}
-            <input name="username" placeholder="username用户名"  type="text" lay-verify="required" class="layui-input" >
+            <input name="username" placeholder="username"  type="text" lay-verify="required" class="layui-input" >
             <hr class="hr15">
-            <input name="password" lay-verify="required" placeholder="password密码"  type="password" class="layui-input">
+            <input name="password" lay-verify="required" placeholder="password"  type="password" class="layui-input">
             <hr class="hr15">
 
 
@@ -52,7 +52,7 @@
             {{--</a>--}}
 
             
-            <input value="login登录" lay-submit lay-filter="login" style="width:100%;" type="submit">
+            <input value="Login" lay-submit lay-filter="login" style="width:100%;" type="submit">
             <hr class="hr20" >
         </form>
     </div>

@@ -21,8 +21,8 @@ Route::get('test/{prenom}', function ($prenom) {
 Route::get('/', function(){
     return view('welcome');
 });
-Route::get('listeMedias', 'App\Http\controllers\listeMediasController@getListeMedias');
-Route::get('listeMedias/{type}/{annee}', 'App\Http\controllers\listeMediasController@getListeMediasTypeAnnee');
+// Route::get('listeMedias', 'App\Http\controllers\listeMediasController@getListeMedias');
+// Route::get('listeMedias/{type}/{annee}', 'App\Http\controllers\listeMediasController@getListeMediasTypeAnnee');
 /*
 //user add route
 Route::get('users/add', 'App\Http\controllers\UserController@add');
@@ -81,6 +81,18 @@ Route::resource('permission','PermissionController');
 Route::post('cate/changeorder','App\Http\controllers\Admin\CateController@changeOrder');
 Route::resource('cate','App\Http\controllers\Admin\CateController');
 
+Route::get('listeMedias', function () {
+    return view('listeMedias');
+});
+
+Route::get('films/{imdb_id}', function ($imdb_id) {return view('films', ['imdb_id' => $imdb_id]);});
+Route::post('/addComment', 'App\Http\controllers\CommentController@create_comment');
+Route::post('/addToWatchlist', 'App\Http\controllers\listeMediasController@add_to_WatchList');
+Route::post('/addTolist', 'App\Http\controllers\listeMediasController@add_to_list');
+Route::post('/admin/login', function () {return view('admin/login');
+});
+Route::get('france',function(){return view('france');});
+Route::get('usa',function(){ return view('usa');});
 
 Route::get('users/select', 'App\Http\controllers\UserController@select');
 

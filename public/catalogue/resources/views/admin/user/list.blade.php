@@ -23,10 +23,10 @@
   <body>
     <div class="x-nav">
       <span class="layui-breadcrumb">
-        <a href="">首页</a>
-        <a href="">演示</a>
+        <a href="">Index</a>
+        <a href="">Demo</a>
         <a>
-          <cite>导航元素</cite></a>
+          <cite>Élément de navigation</cite></a>
       </span>
       <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
         <i class="layui-icon" style="line-height:30px">ဂ</i></a>
@@ -43,14 +43,14 @@
           </div>
           {{--<input class="layui-input" placeholder="开始日" name="start" id="start">--}}
           {{--<input class="layui-input" placeholder="截止日" name="end" id="end">--}}
-          <input type="text" name="username" value="{{ $request->input('username') }}"  placeholder="请输入用户名" autocomplete="off" class="layui-input">
-          <input type="text" name="email"  value="{{ $request->input('email') }}" placeholder="请输入邮箱" autocomplete="off" class="layui-input">
+          <input type="text" name="username" value="{{ $request->input('username') }}"  placeholder="Please enter username" autocomplete="off" class="layui-input">
+          <input type="text" name="email"  value="{{ $request->input('email') }}" placeholder="Please entre email" autocomplete="off" class="layui-input">
           <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
         </form>
       </div>
       <xblock>
         <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>delete many</button>
-        <button class="layui-btn" onclick="x_admin_show('添加用户','{{ url('admin/user/create') }}',600,400)"><i class="layui-icon"></i>添加</button>
+        <button class="layui-btn" onclick="x_admin_show('add user','{{ url('admin/user/create') }}',600,400)"><i class="layui-icon"></i>add</button>
         <span class="x-right" style="line-height:40px">data：88 </span>
       </xblock>
       <table class="layui-table">
@@ -62,54 +62,35 @@
             <th>ID</th>
             <th>UserName</th>
             <th>Email</th>
-            <th>Role</th>
-            <th>Etat</th></tr>
+            <th>Etat</th>
+            <th>Option</th></tr>
         </thead>
         <tbody>
-        <tr>
-            <td>
-              <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
-            </td>
-            <td>1</td>
-            <td>Hao Ji</td>
-            <td>hao.ji@etu.imt-nord-europe.fr</td>
-            <td>04</td>
-            <td>01</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
-            </td>
-            <td>2</td>
-            <td>JiaQi Gao</td>
-            <td>jiaqi.gao@etu.imt-nord-europe.fr</td>
-            <td>04</td>
-            <td>00</td>
-          </tr>
+
         @foreach($user as $v)
           <tr>
             <td>
-              <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='{{ $v->user_id }}'><i class="layui-icon">&#xe605;</i></div>
+              <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='{{ $v->id }}'><i class="layui-icon">&#xe605;</i></div>
             </td>
-            <td>{{ $v->user_id }}</td>
-            <td>{{ $v->user_name }}</td>
+            <td>{{ $v->id }}</td>
+            <td>{{ $v->name }}</td>
             <td>{{ $v->email }}</td>
             <td class="td-status">
-              <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td>
+              <span class="layui-btn layui-btn-normal layui-btn-mini">Active</span></td>
             <td class="td-manage">
-              <a onclick="member_stop(this,{{ $v->user_id }})" href="javascript:;" status="{{ $v->status }}"  title="启用">
+              <a onclick="member_stop(this,{{ $v->id }})" href="javascript:;" status="{{ $v->status }}"  title="启用">
                 <i class="layui-icon">&#xe601;</i>
               </a>
-              <a  href="{{ url('admin/user/auth/'.$v->user_id) }}"   title="授权">
+              <a  href="{{ url('admin/user/auth/'.$v->id) }}"   title="授权">
                 <i class="layui-icon">&#xe631;</i>
               </a>
-              <a title="编辑"  onclick="x_admin_show('编辑','{{ url('admin/user/'.$v->user_id.'/edit') }}',600,400)" href="javascript:;">
+              <a title="编辑"  onclick="x_admin_show('编辑','{{ url('admin/user/'.$v->id.'/edit') }}',600,400)" href="javascript:;">
                 <i class="layui-icon">&#xe642;</i>
               </a>
               {{--<a onclick="x_admin_show('修改密码','member-password.html',600,400)" title="修改密码" href="javascript:;">--}}
                 {{--<i class="layui-icon">&#xe631;</i>--}}
               {{--</a>--}}
-              <a title="删除" onclick="member_del(this,{{ $v->user_id }})" href="javascript:;">
+              <a title="删除" onclick="member_del(this,{{ $v->id }})" href="javascript:;">
                 <i class="layui-icon">&#xe640;</i>
               </a>
             </td>

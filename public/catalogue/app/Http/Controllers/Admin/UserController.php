@@ -51,7 +51,7 @@ class UserController extends Controller
                 //将提交的数据添加到 角色权限关联表
                 foreach ($input['role_id'] as $v){
                     DB::table('user_role')->insert([
-                        'user_id'=>$input['user_id'],
+                        'id'=>$input['id'],
                         'role_id'=>$v
                     ]);
                 }
@@ -79,7 +79,7 @@ class UserController extends Controller
 //        1. 获取提交的请求参数
 //        $input = $request->all();
 //        dd($input);
-       $user =  User::orderBy('user_id','asc')
+       $user =  User::orderBy('id','asc')
             ->where(function($query) use($request){
                 $username = $request->input('username');
                 $email = $request->input('email');

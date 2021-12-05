@@ -165,113 +165,28 @@ li {
 <div class="fav_list">
     <div data-v-357a65ed="" class="fav_list_box">
         <div  class="fav_list_title">
-            <h3 class="fav_list_title_h3">FavoriteList</h3>
+            <h3 class="fav_list_title_h3">Relative</h3>
         </div>
         <div  class="my_fav_con">
             <div>
                 <ul  class="my_fav_list">
 
                     <?php
-                            $index = Auth::user()->id;                
-                            $result_read = DB::select('SELECT distinct table_media.title FROM `table_media` 
-                            INNER JOIN `list` ON table_media.id=list.film_id INNER JOIN `users` ON list.user_id=users.id 
-                            WHERE list.user_id=?',[$index]);
-                            $time = DB::select('SELECT creat_at FROM `list` WHERE user_id =?', [$index]);
+                            $index = 'France';                
+                            $result_read = DB::select('SELECT * FROM `table_media` WHERE country LIKE ?',[$index]);
                             $cnt = count($result_read);
                             for ($i=0; $i<$cnt; $i++){
                                 echo '<li class="my_fav_list_li" id="">';
-                                echo '<a  class="my_fav_list_a" href="/catalogue/public">';
+                                echo '<a  class="my_fav_list_a" href="films/'. $result_read[$i]->imdb_id .'">';
                                 echo $result_read[$i]->title;
                                 echo '</a>';
                                 echo '<label class="my_fav_list_label">';
-                                echo '<span>';
-                                echo $time[$i]->creat_at;
-                                echo '</span>';
-                                echo '<a  class="cancel_fav"><em>Delete</em></a>';
+                                echo '<a  class="cancel_fav"><em>Director: '.$result_read[$i]->director.'</em></a>';
                                 echo '</label>';
                                 echo '</li>';
                             }
-                        ?>
-
-
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="fav_list">
-    <div data-v-357a65ed="" class="fav_list_box">
-        <div  class="fav_list_title">
-            <h3 class="fav_list_title_h3">WatchList</h3>
-        </div>
-        <div  class="my_fav_con">
-            <div>
-                <ul  class="my_fav_list">
-
-                    <?php
-                            $index = Auth::user()->id;                
-                            $result_read = DB::select('SELECT table_media.title FROM `table_media` 
-                            INNER JOIN `watchlist` ON table_media.id=watchlist.film_id INNER JOIN `users` ON watchlist.user_id=users.id 
-                            WHERE watchlist.user_id=?',[$index]);
-                            $time = DB::select('SELECT creat_at FROM `watchlist` WHERE user_id =?', [$index]);
-                            $cnt = count($result_read);
-                            for ($i=0; $i<$cnt; $i++){
-                                echo '<li class="my_fav_list_li" id="">';
-                                echo '<a  class="my_fav_list_a" href="/catalogue/public">';
-                                echo $result_read[$i]->title;
-                                echo '</a>';
-                                echo '<label class="my_fav_list_label">';
-                                echo '<span>';
-                                echo $time[$i]->creat_at;
-                                echo '</span>';
-                                echo '<a  class="cancel_fav"><em>Delete</em></a>';
-                                echo '</label>';
-                                echo '</li>';
-                            }
-                        ?>
-
-
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="fav_list">
-    <div data-v-357a65ed="" class="fav_list_box">
-        <div  class="fav_list_title">
-            <h3 class="fav_list_title_h3">HistoryList</h3>
-        </div>
-        <div  class="my_fav_con">
-            <div>
-                <ul  class="my_fav_list">
-
-                    <?php
-                            $index = Auth::user()->id;                
-                            $result_read = DB::select('SELECT table_media.title FROM `table_media` 
-                            INNER JOIN `history` ON table_media.id=history.film_id INNER JOIN `users` ON history.user_id=users.id 
-                            WHERE history.user_id=?',[$index]);
-                            $time = DB::select('SELECT creat_at FROM `history` WHERE user_id =?', [$index]);
-                            $cnt = count($result_read);
-                            for ($i=0; $i<$cnt; $i++){
-                                echo '<li class="my_fav_list_li" id="">';
-                                echo '<a  class="my_fav_list_a" href="/catalogue/public">';
-                                echo $result_read[$i]->title;
-                                echo '</a>';
-                                echo '<label class="my_fav_list_label">';
-                                echo '<span>';
-                                echo $time[$i]->creat_at;
-                                echo '</span>';
-                                echo '<a  class="cancel_fav"><em>Delete</em></a>';
-                                echo '</label>';
-                                echo '</li>';
-                            }
-                        ?>
-
-
-                    
-                </ul>
+                        ?>                    
+               </ul>
             </div>
         </div>
     </div>

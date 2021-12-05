@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>欢迎页面-X-admin2.0</title>
+        <title>Welcome-JiLiJiLi-admin2.0</title>
         <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
@@ -11,24 +11,24 @@
     </head>
     <body>
         <div class="x-body">
-            <blockquote class="layui-elem-quote">欢迎使用x-admin 后台模版！</blockquote>
+            <blockquote class="layui-elem-quote">JILIJILI-CDAW Projet Final 2021 JiaQi Gao et Hao Ji</blockquote>
             <fieldset class="layui-elem-field">
-              <legend>信息统计</legend>
+              <legend>WEBSITE DATA INFORMATION</legend>
               <div class="layui-field-box">
                 <table class="layui-table" lay-even>
                     <thead>
                         <tr>
-                            <th>统计</th>
-                            <th>资讯库</th>
-                            <th>图片库</th>
-                            <th>产品库</th>
-                            <th>用户</th>
-                            <th>管理员</th>
+                            <th>DATA</th>
+                            <th>MEDIA</th>
+                            <th>PICTURE</th>
+                            <th>COMMENT</th>
+                            <th>USER</th>
+                            <th>ADMIN</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>总数</td>
+                            <td>TOTAL</td>
                             <td>92</td>
                             <td>9</td>
                             <td>0</td>
@@ -36,7 +36,7 @@
                             <td>20</td>
                         </tr>
                         <tr>
-                            <td>今日</td>
+                            <td>TODAY</td>
                             <td>0</td>
                             <td>0</td>
                             <td>0</td>
@@ -44,7 +44,7 @@
                             <td>0</td>
                         </tr>
                         <tr>
-                            <td>昨日</td>
+                            <td>HIER</td>
                             <td>0</td>
                             <td>0</td>
                             <td>0</td>
@@ -52,7 +52,7 @@
                             <td>0</td>
                         </tr>
                         <tr>
-                            <td>本周</td>
+                            <td>THIS WEEKEND</td>
                             <td>2</td>
                             <td>0</td>
                             <td>0</td>
@@ -60,7 +60,7 @@
                             <td>0</td>
                         </tr>
                         <tr>
-                            <td>本月</td>
+                            <td>THIS MONTH</td>
                             <td>2</td>
                             <td>0</td>
                             <td>0</td>
@@ -72,107 +72,107 @@
                 <table class="layui-table">
                 <thead>
                     <tr>
-                        <th colspan="2" scope="col">服务器信息</th>
+                        <th colspan="2" scope="col">YOUR SERVER INFORMATION(imaginary)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th width="30%">服务器计算机名</th>
+                        <th width="30%">SERVER NAME </th>
                         <td><span id="lbServerName">http://127.0.0.1/</span></td>
                     </tr>
                     <tr>
-                        <td>服务器IP地址</td>
+                        <td>SERVER IP </td>
                         <td>192.168.1.1</td>
                     </tr>
                     <tr>
-                        <td>服务器域名</td>
-                        <td>x.xuebingsi.com</td>
+                        <td>SERVER DOMAIN NAME </td>
+                        <td>www.jilijili.com</td>
                     </tr>
                     <tr>
-                        <td>服务器端口 </td>
-                        <td>80</td>
+                        <td>SERVER PORT </td>
+                        <td>8080</td>
                     </tr>
                     <tr>
-                        <td>服务器IIS版本 </td>
+                        <td>SERVER IIS VERSION </td>
                         <td>Microsoft-IIS/6.0</td>
                     </tr>
                     <tr>
-                        <td>本文件所在文件夹 </td>
-                        <td>D:\WebSite\HanXiPuTai.com\XinYiCMS.Web\</td>
+                        <td>The folder where this file is located</td>
+                        <td>D:\M2 Classes\CDAW\uv-cdaw-2022\public\catalogue\resources\views</td>
                     </tr>
                     <tr>
-                        <td>服务器操作系统 </td>
-                        <td>Microsoft Windows NT 5.2.3790 Service Pack 2</td>
+                        <td>SERVER OPTION SYSTEM</td>
+                        <td>Microsoft Windows 10 </td>
                     </tr>
                     <tr>
-                        <td>系统所在文件夹 </td>
+                        <td>SYSTEM FOLDER </td>
                         <td>C:\WINDOWS\system32</td>
                     </tr>
                     <tr>
-                        <td>服务器脚本超时时间 </td>
+                        <td>SERVER SCRIPT TIMEOUT </td>
                         <td>30000秒</td>
                     </tr>
                     <tr>
-                        <td>服务器的语言种类 </td>
-                        <td>Chinese (People's Republic of China)</td>
+                        <td>SERVER LANGUAGE </td>
+                        <td>Chinese (People's Republic of China)、English、French</td>
                     </tr>
                     <tr>
-                        <td>.NET Framework 版本 </td>
+                        <td>.NET Framework VERSIOn </td>
                         <td>2.050727.3655</td>
                     </tr>
                     <tr>
-                        <td>服务器当前时间 </td>
-                        <td>2017-01-01 12:06:23</td>
+                        <td>SERVER CURRENT TIME </td>
+                        <td>2021-12-05 17:33:23</td>
                     </tr>
                     <tr>
-                        <td>服务器IE版本 </td>
-                        <td>6.0000</td>
+                        <td>SERVER CHROME VERSION </td>
+                        <td>14.0</td>
                     </tr>
                     <tr>
-                        <td>服务器上次启动到现在已运行 </td>
-                        <td>7210分钟</td>
+                        <td>The server has been running since the last time it was started </td>
+                        <td>114514 minutes</td>
                     </tr>
                     <tr>
-                        <td>逻辑驱动器 </td>
+                        <td>Logical drive </td>
                         <td>C:\D:\</td>
                     </tr>
                     <tr>
-                        <td>CPU 总数 </td>
+                        <td>CPU Number </td>
                         <td>4</td>
                     </tr>
                     <tr>
-                        <td>CPU 类型 </td>
+                        <td>CPU Category </td>
                         <td>x86 Family 6 Model 42 Stepping 1, GenuineIntel</td>
                     </tr>
                     <tr>
-                        <td>虚拟内存 </td>
+                        <td>Virtual Memory </td>
                         <td>52480M</td>
                     </tr>
                     <tr>
-                        <td>当前程序占用内存 </td>
+                        <td>Current program occupies memory </td>
                         <td>3.29M</td>
                     </tr>
                     <tr>
-                        <td>Asp.net所占内存 </td>
+                        <td>Memory occupied by Asp.net </td>
                         <td>51.46M</td>
                     </tr>
                     <tr>
-                        <td>当前Session数量 </td>
+                        <td>Current number of sessions </td>
                         <td>8</td>
                     </tr>
                     <tr>
-                        <td>当前SessionID </td>
+                        <td>Current Session ID </td>
                         <td>gznhpwmp34004345jz2q3l45</td>
                     </tr>
                     <tr>
-                        <td>当前系统用户名 </td>
+                        <td>Current system user name </td>
                         <td>NETWORK SERVICE</td>
                     </tr>
                 </tbody>
             </table>
               </div>
             </fieldset>
-            <blockquote class="layui-elem-quote layui-quote-nm">感谢layui,百度Echarts,jquery,本后台系统由X前端框架提供前端技术支持。</blockquote>
+            <blockquote class="layui-elem-quote layui-quote-nm">CDAW Projet Final 2021 JiaQi Gao et Hao Ji</blockquote>
             
         </div>
         <script>

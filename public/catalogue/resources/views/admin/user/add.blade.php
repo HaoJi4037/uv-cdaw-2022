@@ -3,7 +3,7 @@
   
   <head>
     <meta charset="UTF-8">
-    <title>Welcome-Page-X-admin2.0</title>
+    <title>UserAdd-Page-X-admin2.0</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -26,19 +26,19 @@
         <form class="layui-form">
           <div class="layui-form-item">
               <label for="L_email" class="layui-form-label">
-                  <span class="x-red">*</span>邮箱
+                  <span class="x-red">*</span>Email
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="L_email" name="email" required="" lay-verify="email"
                   autocomplete="off" class="layui-input">
               </div>
               <div class="layui-form-mid layui-word-aux">
-                  <span class="x-red">*</span>将会成为您唯一的登入名
+                  <span class="x-red">*</span>will be your own login name
               </div>
           </div>
           {{--<div class="layui-form-item">--}}
               {{--<label for="L_username" class="layui-form-label">--}}
-                  {{--<span class="x-red">*</span>昵称--}}
+                  {{--<span class="x-red">*</span>nickname--}}
               {{--</label>--}}
               {{--<div class="layui-input-inline">--}}
                   {{--<input type="text" id="L_username" name="username" required="" lay-verify="nikename"--}}
@@ -47,19 +47,19 @@
           {{--</div>--}}
           <div class="layui-form-item">
               <label for="L_pass" class="layui-form-label">
-                  <span class="x-red">*</span>密码
+                  <span class="x-red">*</span>password
               </label>
               <div class="layui-input-inline">
                   <input type="password" id="L_pass" name="pass" required="" lay-verify="pass"
                   autocomplete="off" class="layui-input">
               </div>
               <div class="layui-form-mid layui-word-aux">
-                  6到16个字符
+                  6-16word
               </div>
           </div>
           <div class="layui-form-item">
               <label for="L_repass" class="layui-form-label">
-                  <span class="x-red">*</span>确认密码
+                  <span class="x-red">*</span>confirm password
               </label>
               <div class="layui-input-inline">
                   <input type="password" id="L_repass" name="repass" required="" lay-verify="repass"
@@ -70,7 +70,7 @@
               <label for="L_repass" class="layui-form-label">
               </label>
               <button  class="layui-btn" lay-filter="add" lay-submit="">
-                  增加
+                  add
               </button>
           </div>
       </form>
@@ -85,10 +85,10 @@
           form.verify({
             nikename: function(value){
               if(value.length < 5){
-                return '昵称至少得5个字符啊';
+                return 'nickname at least 5 words';
               }
             }
-            ,pass: [/(.+){6,12}$/, '密码必须6到12位']
+            ,pass: [/(.+){6,12}$/, 'password must 6-12']
             ,repass: function(value){
                 if($('#L_pass').val()!=$('#L_repass').val()){
                     return '两次密码不一致';
